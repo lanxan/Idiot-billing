@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Billing</title>
-		  <!--<for google search key word in content>-->
-    		<meta name="description" content="">
-    	  <!--<let you web app can apply to the smartphone>-->
-    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	  <!--<run in the latest IE version>-->
-    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	  <!--<favorite icon>-->
-    		<link rel="icon" href=""  type="image/x-icon" />
-	</head>
-	<body>
-	</body>
+    <head>
+        <title>Idiot-Billing</title>
+        <!--<for google search key word in content>-->
+        <meta name="description" content="">
+        <!--<let you web app can apply to the smartphone>-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<run in the latest IE version>-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--<favorite icon>-->
+        <link rel="icon" href=""  type="image/x-icon" />
+    </head>
+    <body>
+        Date: 
+        <form onsubmit="return false" oninput="moneyFinal.value = parseInt(moneyStart.value) - parseInt(moneyEnd.value) + parseInt(moneyPlus.value)">
+            MoneyStart: <input type="number" name="moneyStart"><br>
+            MoneyEnd: <input type="number" name="moneyEnd"><br>
+            MoneyPlus: <input type="number" name="moneyPlus"><br>
+            <hr>
+            MoneyFinal: <output name="moneyFinal" for="moneyStart moneyEnd moneyPlus"></output>
+        </form>
+    </body>
 </html>
