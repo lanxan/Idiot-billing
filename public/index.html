@@ -10,9 +10,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <!--<favorite icon>-->
         <link rel="icon" href=""  type="image/x-icon" />
+        <script src="js/calendar.js"></script>
     </head>
     <body>
-        Date: 
+        <div id="date">
+            <button id="pre" onclick="getTodayDate()">left</button>
+            <script>getTodayDate()</script>
+            <button id="next">right</button>
+        </div>    
         <form onsubmit="return false" oninput="moneyFinal.value = parseInt(moneyStart.value) - parseInt(moneyEnd.value) + parseInt(moneyPlus.value)">
             MoneyStart: <input type="number" name="moneyStart"><br>
             MoneyEnd: <input type="number" name="moneyEnd"><br>
