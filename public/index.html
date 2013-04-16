@@ -13,10 +13,10 @@
         <script src="js/calendar.js"></script>
     </head>
     <body>
-        <div id="date">
-            <button id="pre" onclick="getTodayDate()">left</button>
-            <script>getTodayDate()</script>
-            <button id="next">right</button>
+        <div id="calendar">
+            <button id="pre" onclick="getTodayDate(-1)">left</button>
+            <span id="date"><script>getTodayDate(0)</script></span>
+            <button id="next" onclick="getTodayDate(1)">right</button>
         </div>    
         <form onsubmit="return false" oninput="moneyFinal.value = parseInt(moneyStart.value) - parseInt(moneyEnd.value) + parseInt(moneyPlus.value)">
             MoneyStart: <input type="number" name="moneyStart"><br>

@@ -1,7 +1,10 @@
 // This is for all about calendar
 
-function getTodayDate(){
     var date = new Date();
-
-    document.write(date.getFullYear() + "/" + (date.getMonth()+1) + "/" + date.getDate());
+function getTodayDate(shiftDay){
+    date.setDate(date.getDate() + shiftDay);
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    document.getElementById("date").innerHTML = year + "/" + month + "/" + day;
 }
