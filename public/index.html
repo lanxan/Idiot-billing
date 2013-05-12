@@ -11,19 +11,20 @@
         <!--<favorite icon>-->
         <link rel="icon" href=""  type="image/x-icon" />
         <script src="js/calendar.js"></script>
+        <script src="js/connectDB.js"></script>
     </head>
-    <body>
-        <form onsubmit="return checkForm(this)" oninput="moneyFinal.value = moneyStart.valueAsNumber - moneyEnd.valueAsNumber + moneyPlus.valueAsNumber" method="post" action="js/connectDB.js">
+    <body onload="getTodayDate(0)"> 
         <div id="calendar">
             <button id="pre" onclick="getTodayDate(-1)">left</button>
-            <span id="date"><script>getTodayDate(0)</script></span>
+            <span id="date"></span>
             <button id="next" onclick="getTodayDate(1)">right</button>
         </div>    
+        <form id="dairyForm" method="POST" action="php/savedata2.php" oninput="moneyTotal.value = moneyStart.valueAsNumber - moneyEnd.valueAsNumber + moneyPlus.valueAsNumber">
             MoneyStart: <input type="number" name="moneyStart"><br>
             MoneyEnd: <input type="number" name="moneyEnd"><br>
             MoneyPlus: <input type="number" name="moneyPlus" value="0"><br>
             <hr>
-            MoneyTotal: <output name="moneyTotal"></output>
+            MoneyTotal: <output name="moneyTotal" for="moneyStart moneyEnd moneyPlus"></output><br>
             <input type="submit" name="record" value="DONE">
         </form>
     </body>
